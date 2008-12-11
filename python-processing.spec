@@ -1,11 +1,10 @@
 #TODO: Add docs, package examples
 %define		module	processing
-######		/home/users/matkor/rpm/SOURCES/rpm.groups: no such file
 Summary:	Package for using processes which mimics the threading module
 Summary(pl.UTF-8):	Pakiet używający procesów do naśladownia modułu threading
 Name:		python-%{module}
 Version:	0.52
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Languages/Python
 Source0:	http://download.berlios.de/pyprocessing/%{module}-%{version}.zip
@@ -61,14 +60,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 #%%doc AUTHORS CREDITS ChangeLog NEWS README THANKS TODO
-#%%{py_sitedir}/*.py[co]
 %dir %{py_sitedir}/%{module}
 %{py_sitedir}/%{module}/*.py[co]
-#%%attr(755,root,root) %{py_sitedir}/*.so
 %attr(755,root,root) %{py_sitedir}/%{module}/_processing.so
 %{py_sitedir}/%{module}/dummy
 
 
 %if "%{py_ver}" > "2.4"
-%{py_sitedir}/TEMPLATE-*.egg-info
+%{py_sitedir}/%{module}-*.egg-info
 %endif
