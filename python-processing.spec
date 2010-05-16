@@ -18,6 +18,7 @@ BuildRequires:	python-ctypes
 BuildRequires:	rpm-pythonprov
 # if py_postclean is used
 BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	unzip
 #%pyrequires_eq	python-libs
 %pyrequires_eq	python-modules
 %if "%{py_ver}" < "2.5"
