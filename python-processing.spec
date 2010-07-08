@@ -4,7 +4,7 @@ Summary:	Package for using processes which mimics the threading module
 Summary(pl.UTF-8):	Pakiet używający procesów do naśladownia modułu threading
 Name:		python-%{module}
 Version:	0.52
-Release:	2
+Release:	3
 License:	BSD
 Group:		Development/Languages/Python
 Source0:	http://download.berlios.de/pyprocessing/%{module}-%{version}.zip
